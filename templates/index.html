@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IA Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 IA Chat</h1>
+    <form method="POST">
+      <input type="text" name="pregunta" placeholder="Escribe tu pregunta..." required>
+      <button type="submit">Enviar</button>
+    </form>
+    {% if respuesta %}
+    <div class="respuesta">
+      <p><strong>IA:</strong> {{ respuesta }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
